@@ -95,60 +95,90 @@
       <e p="ARDesktopLoaderBuildProcessor.cs" t="Include" />
       <e p="ARDesktopSettings.cs" t="Include" />
       <e p="ARDesktopSettingsProvider.cs" t="Include" />
+      <e p="Utilities" t="Include">
+        <e p="MenuItemQuickFixHelper.cs" t="Include" />
+      </e>
     </e>
     <e p="C:\git\pfc-packages-master\development\pfc-ar-desktop-plugin\package\Runtime" t="Include">
       <e p="ARDesktopAnchorSubsystem.cs" t="Include" />
       <e p="ARDesktopCameraSubsystem.cs" t="Include" />
       <e p="ARDesktopEnvironmentProbeSubsystem.cs" t="Include" />
+      <e p="ARDesktopImageDatabase.cs" t="Include" />
+      <e p="ARDesktopImageTrackingSubsystem.cs" t="Include" />
       <e p="ARDesktopLoader.cs" t="Include" />
       <e p="ARDesktopLoaderConstants.cs" t="Include" />
       <e p="ARDesktopLoaderSettings.cs" t="Include" />
       <e p="ARDesktopPlaneProvider.cs" t="Include" />
-      <e p="ARDesktopPromise.cs" t="Include" />
+      <e p="ARDesktopProjectInfo.cs" t="Include" />
       <e p="ARDesktopRaycastSubsystem.cs" t="Include" />
       <e p="ARDesktopSessionSubsystem.cs" t="Include" />
       <e p="ARDesktopXRDepthSubsystem.cs" t="Include" />
       <e p="Assembly.cs" t="Include" />
+      <e p="Compatibility" t="Include">
+        <e p="AutoMaterial.cs" t="Include" />
+        <e p="CameraBackgroundRendererFeature.cs" t="Include" />
+      </e>
       <e p="Extensions" t="Include">
         <e p="BoundedPlaneHelper.cs" t="Include" />
         <e p="CameraFrameHelper.cs" t="Include" />
         <e p="ClockWiseComparer.cs" t="Include" />
         <e p="NativeArrayExtensions.cs" t="Include" />
         <e p="TrackableIdHelper.cs" t="Include" />
+        <e p="XRAnchorHelper.cs" t="Include" />
         <e p="XREnvironmentProbeHelper.cs" t="Include" />
         <e p="XRTextureDescriptorHelper.cs" t="Include" />
       </e>
       <e p="Hacks" t="Include">
         <e p="DesktopCameraFrame.cs" t="Include" />
       </e>
-      <e p="Input" t="Include">
-        <e p="ARDesktopPoseProvider.cs" t="Include" />
+      <e p="InputDevices" t="Include">
         <e p="CameraController.cs" t="Include" />
         <e p="DesktopInputDevice.cs" t="Include" />
+        <e p="DesktopPoseProvider.cs" t="Include" />
         <e p="InputLayoutLoader.cs" t="Include" />
       </e>
       <e p="Interfaces" t="Include">
         <e p="IAnchorProvider.cs" t="Include" />
+        <e p="IOverrideablePositionRotation.cs" t="Include" />
         <e p="IPlaneProvider.cs" t="Include" />
         <e p="IPointCloudProvider.cs" t="Include" />
         <e p="IProbeProvider.cs" t="Include" />
+        <e p="ITrackedImageProvider.cs" t="Include" />
+      </e>
+      <e p="Resources" t="Include">
+        <e p="ExampleComponents" t="Include">
+          <e p="Assets" t="Include">
+            <e p="FlyIntoPosition.cs" t="Include" />
+            <e p="LookAtCamera.cs" t="Include" />
+            <e p="RandomColor.cs" t="Include" />
+          </e>
+          <e p="SimpleARObjectPlaceExample.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="ARDesktopBackground.shader" t="Include" />
+          <e p="URP.ShadowCatcher" t="Include">
+            <e p="ARFloorShadow.shader" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="Simulation" t="Include">
+        <e p="ARDesktopSceneUtility.cs" t="Include" />
         <e p="Geometry" t="Include">
           <e p="Geometry.cs" t="Include" />
           <e p="Triangle.cs" t="Include" />
         </e>
         <e p="PlaneData.cs" t="Include" />
-        <e p="SimulatedARAnchor.cs" t="Include" />
+        <e p="RealitySimulationManager.cs" t="Include" />
         <e p="SimulatedARCameraFrameDataProvider.cs" t="Include" />
         <e p="SimulatedAREnvironmentProbe.cs" t="Include" />
         <e p="SimulatedARPlane.cs" t="Include" />
         <e p="SimulatedARPlaneGeneration.cs" t="Include" />
         <e p="SimulatedARPointCloud.cs" t="Include" />
         <e p="SimulatedARPointRaycaster.cs" t="Include" />
+        <e p="SimulatedARTrackedImage.cs" t="Include" />
       </e>
     </e>
-    <e p="C:\Users\marcel\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\marcel\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_arfoundation-samples.1730893103.00" t="ExcludeRecursive" />
+    <e p="C:\Users\marcel\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\marcel\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_arfoundation-samples.1730893103.00" t="ExcludeRecursive" />
   </component>
 </project>
