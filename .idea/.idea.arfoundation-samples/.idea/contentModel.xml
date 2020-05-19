@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\git\pfc-packages-master\development\pfc-ar-desktop-plugin\development\arfoundation-samples" t="IncludeRecursive">
+      <e p="ARDesktop.Utilities.csproj" t="IncludeRecursive" />
       <e p="arfoundation-samples.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -25,6 +26,16 @@
           <e p="LightEstimation" t="Include">
             <e p="PlatformSelector.cs" t="Include" />
             <e p="Rotator.cs" t="Include" />
+          </e>
+          <e p="Meshing" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="MeshClassificationFracking.cs" t="Include" />
+              <e p="ProjectileLauncher.cs" t="Include" />
+              <e p="ToggleMeshClassification.cs" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="MeshingOverlay.shader" t="Include" />
+            </e>
           </e>
           <e p="Object Tracking" t="Include">
             <e p="Printable Templates" t="Include">
@@ -82,6 +93,8 @@
         </e>
         <e p="Shaders" t="Include">
           <e p="FeatheredPlaneShader.shader" t="Include" />
+          <e p="Normal.shader" t="Include" />
+          <e p="NormalOverlay.shader" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
@@ -93,8 +106,12 @@
     <e p="C:\git\pfc-packages-master\development\pfc-ar-desktop-plugin\package\Editor" t="Include">
       <e p="ARDesktopBuildProcessor.cs" t="Include" />
       <e p="ARDesktopLoaderBuildProcessor.cs" t="Include" />
+      <e p="ARDesktopPackageMetadata.cs" t="Include" />
       <e p="ARDesktopSettings.cs" t="Include" />
       <e p="ARDesktopSettingsProvider.cs" t="Include" />
+      <e p="Simulation" t="Include">
+        <e p="RealitySimulationManagerEditor.cs" t="Include" />
+      </e>
       <e p="Utilities" t="Include">
         <e p="MenuItemQuickFixHelper.cs" t="Include" />
       </e>
@@ -115,8 +132,8 @@
       <e p="ARDesktopXRDepthSubsystem.cs" t="Include" />
       <e p="Assembly.cs" t="Include" />
       <e p="Compatibility" t="Include">
+        <e p="ARDesktopCameraBackgroundRendererFeature.cs" t="Include" />
         <e p="AutoMaterial.cs" t="Include" />
-        <e p="CameraBackgroundRendererFeature.cs" t="Include" />
       </e>
       <e p="Extensions" t="Include">
         <e p="BoundedPlaneHelper.cs" t="Include" />
@@ -147,17 +164,22 @@
       </e>
       <e p="Resources" t="Include">
         <e p="ExampleComponents" t="Include">
+          <e p="ARInput.cs" t="Include" />
           <e p="Assets" t="Include">
             <e p="FlyIntoPosition.cs" t="Include" />
             <e p="LookAtCamera.cs" t="Include" />
             <e p="RandomColor.cs" t="Include" />
           </e>
+          <e p="PlaceContentOnClick.cs" t="Include" />
           <e p="SimpleARObjectPlaceExample.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
           <e p="ARDesktopBackground.shader" t="Include" />
+          <e p="ShaderDefines.cs" t="Include" />
           <e p="URP.ShadowCatcher" t="Include">
             <e p="ARFloorShadow.shader" t="Include" />
+            <e p="ARShadowCatcherBuiltIn.cginc" t="Include" />
+            <e p="ARShadowCatcherURP.cginc" t="Include" />
           </e>
         </e>
       </e>
@@ -175,7 +197,11 @@
         <e p="SimulatedARPlaneGeneration.cs" t="Include" />
         <e p="SimulatedARPointCloud.cs" t="Include" />
         <e p="SimulatedARPointRaycaster.cs" t="Include" />
+        <e p="SimulatedARReality.cs" t="Include" />
         <e p="SimulatedARTrackedImage.cs" t="Include" />
+      </e>
+      <e p="Utilities" t="Include">
+        <e p="PlacementHelper.cs" t="Include" />
       </e>
     </e>
     <e p="C:\Users\marcel\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />

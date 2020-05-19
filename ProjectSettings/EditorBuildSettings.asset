@@ -102,7 +102,13 @@ EditorBuildSettings:
     path: Assets/Scenes/UX/SampleUXScene.unity
     guid: 3b42d67a72bbc4004bf713db0e312326
   m_configObjects:
-    com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 2d5fb8e61571b4e3897f221189089fd6,
+    com.unity.xr.ARDesktop.PlayerSettings: {fileID: 11400000, guid: 77f9745ad7eb8974298d17b0cd987dd4,
+      type: 2}
+    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: b74a4c873dedd734a96a99c26e21610a,
+      type: 2}
+    com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: aa26f261712496f4782b1da1c7e21039,
+      type: 2}
+    com.unity.xr.management.ARDesktop_loader: {fileID: 11400000, guid: 4e67f3aff76651644b08d5ebcdb2a5a0,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e2f869774b12e400996eb546603602e3,
       type: 2}
