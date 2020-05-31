@@ -102,6 +102,8 @@ EditorBuildSettings:
     path: Assets/Scenes/UX/SampleUXScene.unity
     guid: 3b42d67a72bbc4004bf713db0e312326
   m_configObjects:
+    com.needle.xr.management.arsimulation_loader: {fileID: 11400000, guid: 5371043e2a2a869479d59bb6d6a4b6c9,
+      type: 2}
     com.unity.xr.ARDesktop.PlayerSettings: {fileID: 11400000, guid: 77f9745ad7eb8974298d17b0cd987dd4,
       type: 2}
     com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: b74a4c873dedd734a96a99c26e21610a,
