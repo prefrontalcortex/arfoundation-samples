@@ -166,12 +166,12 @@
           <e p="MakeContentAppearExample.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
-          <e p="ARDesktopBackground.shader" t="Include" />
+          <e p="ARSimulationCameraBackground.shader" t="Include" />
           <e p="ShaderDefines.cs" t="Include" />
           <e p="URP.ShadowCatcher" t="Include">
-            <e p="ARFloorShadow.shader" t="Include" />
             <e p="ARShadowCatcherBuiltIn.cginc" t="Include" />
             <e p="ARShadowCatcherURP.cginc" t="Include" />
+            <e p="ARSimulationShadowCatcher.shader" t="Include" />
           </e>
         </e>
       </e>
