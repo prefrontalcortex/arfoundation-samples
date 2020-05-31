@@ -97,39 +97,35 @@
           <e p="NormalOverlay.shader" t="Include" />
         </e>
       </e>
+      <e p="Needle.XR.ARSimulation.csproj" t="IncludeRecursive" />
+      <e p="Needle.XR.ARSimulation.Editor.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
-      <e p="Unity.XR.ARDesktop.csproj" t="IncludeRecursive" />
-      <e p="Unity.XR.ARDesktop.Editor.csproj" t="IncludeRecursive" />
     </e>
     <e p="C:\git\pfc-packages-master\development\pfc-ar-desktop-plugin\package\Editor" t="Include">
-      <e p="ARDesktopBuildProcessor.cs" t="Include" />
-      <e p="ARDesktopLoaderBuildProcessor.cs" t="Include" />
-      <e p="ARDesktopPackageMetadata.cs" t="Include" />
-      <e p="ARDesktopSettings.cs" t="Include" />
-      <e p="ARDesktopSettingsProvider.cs" t="Include" />
+      <e p="ARSimulationLoaderBuildProcessor.cs" t="Include" />
+      <e p="ARSimulationPackageMetadata.cs" t="Include" />
+      <e p="ARSimulationSettings.cs" t="Include" />
+      <e p="ARSimulationSettingsProvider.cs" t="Include" />
       <e p="Simulation" t="Include">
         <e p="RealitySimulationManagerEditor.cs" t="Include" />
       </e>
-      <e p="Utilities" t="Include">
-        <e p="MenuItemQuickFixHelper.cs" t="Include" />
-      </e>
     </e>
     <e p="C:\git\pfc-packages-master\development\pfc-ar-desktop-plugin\package\Runtime" t="Include">
-      <e p="ARDesktopAnchorSubsystem.cs" t="Include" />
-      <e p="ARDesktopCameraSubsystem.cs" t="Include" />
-      <e p="ARDesktopEnvironmentProbeSubsystem.cs" t="Include" />
-      <e p="ARDesktopImageDatabase.cs" t="Include" />
-      <e p="ARDesktopImageTrackingSubsystem.cs" t="Include" />
-      <e p="ARDesktopLoader.cs" t="Include" />
-      <e p="ARDesktopLoaderConstants.cs" t="Include" />
-      <e p="ARDesktopLoaderSettings.cs" t="Include" />
-      <e p="ARDesktopPlaneProvider.cs" t="Include" />
-      <e p="ARDesktopProjectInfo.cs" t="Include" />
-      <e p="ARDesktopRaycastSubsystem.cs" t="Include" />
-      <e p="ARDesktopSessionSubsystem.cs" t="Include" />
-      <e p="ARDesktopXRDepthSubsystem.cs" t="Include" />
+      <e p="ARSimulationAnchorSubsystem.cs" t="Include" />
+      <e p="ARSimulationCameraSubsystem.cs" t="Include" />
+      <e p="ARSimulationEnvironmentProbeSubsystem.cs" t="Include" />
+      <e p="ARSimulationImageDatabase.cs" t="Include" />
+      <e p="ARSimulationImageTrackingSubsystem.cs" t="Include" />
+      <e p="ARSimulationLoader.cs" t="Include" />
+      <e p="ArSimulationLoaderConstants.cs" t="Include" />
+      <e p="ARSimulationLoaderSettings.cs" t="Include" />
+      <e p="ARSimulationPlaneProvider.cs" t="Include" />
+      <e p="ARSimulationProjectInfo.cs" t="Include" />
+      <e p="ARSimulationRaycastSubsystem.cs" t="Include" />
+      <e p="ARSimulationSessionSubsystem.cs" t="Include" />
+      <e p="ARSimulationXRDepthSubsystem.cs" t="Include" />
       <e p="Assembly.cs" t="Include" />
       <e p="Compatibility" t="Include">
         <e p="ARDesktopCameraBackgroundRendererFeature.cs" t="Include" />
@@ -145,9 +141,6 @@
         <e p="XREnvironmentProbeHelper.cs" t="Include" />
         <e p="XRTextureDescriptorHelper.cs" t="Include" />
       </e>
-      <e p="Hacks" t="Include">
-        <e p="DesktopCameraFrame.cs" t="Include" />
-      </e>
       <e p="InputDevices" t="Include">
         <e p="CameraController.cs" t="Include" />
         <e p="DesktopInputDevice.cs" t="Include" />
@@ -155,7 +148,6 @@
         <e p="InputLayoutLoader.cs" t="Include" />
       </e>
       <e p="Interfaces" t="Include">
-        <e p="IAnchorProvider.cs" t="Include" />
         <e p="IOverrideablePositionRotation.cs" t="Include" />
         <e p="IPlaneProvider.cs" t="Include" />
         <e p="IPointCloudProvider.cs" t="Include" />
@@ -170,8 +162,8 @@
             <e p="LookAtCamera.cs" t="Include" />
             <e p="RandomColor.cs" t="Include" />
           </e>
-          <e p="PlaceContentOnClick.cs" t="Include" />
-          <e p="SimpleARObjectPlaceExample.cs" t="Include" />
+          <e p="InstantiateAtRaycastHitExample.cs" t="Include" />
+          <e p="MakeContentAppearExample.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
           <e p="ARDesktopBackground.shader" t="Include" />
@@ -184,14 +176,15 @@
         </e>
       </e>
       <e p="Simulation" t="Include">
-        <e p="ARDesktopSceneUtility.cs" t="Include" />
         <e p="Geometry" t="Include">
           <e p="Geometry.cs" t="Include" />
           <e p="Triangle.cs" t="Include" />
         </e>
         <e p="PlaneData.cs" t="Include" />
         <e p="RealitySimulationManager.cs" t="Include" />
+        <e p="SceneSetup.cs" t="Include" />
         <e p="SimulatedARCameraFrameDataProvider.cs" t="Include" />
+        <e p="SimulatedARElement.cs" t="Include" />
         <e p="SimulatedAREnvironmentProbe.cs" t="Include" />
         <e p="SimulatedARPlane.cs" t="Include" />
         <e p="SimulatedARPlaneGeneration.cs" t="Include" />
