@@ -26,6 +26,7 @@
       <Path>../../package</Path>
     </explicitIncludes>
     <explicitExcludes>
+      <Path>.github</Path>
       <Path>.idea</Path>
       <Path>Builds</Path>
       <Path>Library</Path>
