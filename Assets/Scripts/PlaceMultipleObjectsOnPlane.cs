@@ -39,24 +39,40 @@ public class PlaceMultipleObjectsOnPlane : MonoBehaviour
         m_RaycastManager = GetComponent<ARRaycastManager>();
     }
 
+    private static bool TryGetTouchPosition(out Vector2 touchPosition)
+    {
+#if UNITY_EDITOR
+        if (Input.GetMouseButtonDown(0))
+        {
+            var mousePosition = Input.mousePosition;
+            touchPosition = new Vector2(mousePosition.x, mousePosition.y);
+            return true;
+        }
+#else
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            touchPosition = Input.GetTouch(0).position;
+            return true;
+        }
+#endif
+
+        touchPosition = default;
+        return false;
+    }
+
     void Update()
     {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Began)
+        if (TryGetTouchPosition(out var position))
+        {   
+            if (m_RaycastManager.Raycast(position, s_Hits, TrackableType.PlaneWithinPolygon))
             {
-                if (m_RaycastManager.Raycast(touch.position, s_Hits, TrackableType.PlaneWithinPolygon))
+                Pose hitPose = s_Hits[0].pose;
+
+                spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
+
+                if (onPlacedObject != null)
                 {
-                    Pose hitPose = s_Hits[0].pose;
-
-                    spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
-
-                    if (onPlacedObject != null)
-                    {
-                        onPlacedObject();
-                    }
+                    onPlacedObject();
                 }
             }
         }
