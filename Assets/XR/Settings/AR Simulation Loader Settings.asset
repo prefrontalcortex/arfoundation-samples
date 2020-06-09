@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: AR Simulation Loader Settings
   m_EditorClassIdentifier: 
   m_StartAndStopSubsystems: 1
+  m_allowAutoSetupLogging: 0
   m_allowAutoSceneSetup: 1
   m_allowAutoPlane: 1
   m_allowAutoPointCloud: 1
+  m_allowAutoAnchor: 1
+  m_allowAutoTrackedImage: 1
