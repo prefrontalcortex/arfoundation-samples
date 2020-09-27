@@ -18,6 +18,14 @@ namespace UnityEngine.XR.ARFoundation.Samples
         }
 
         [SerializeField]
+        GameObject m_ImageTrackingMenu;
+        public GameObject imageTrackingMenu
+        {
+            get { return m_ImageTrackingMenu; }
+            set { m_ImageTrackingMenu = value; }
+        }
+
+        [SerializeField]
         GameObject m_FaceTrackingMenu;
         public GameObject faceTrackingMenu
         {
@@ -56,12 +64,25 @@ namespace UnityEngine.XR.ARFoundation.Samples
             get { return m_DepthMenu; }
             set { m_DepthMenu = value; }
         }
+        
+        [SerializeField]
+        GameObject m_LightEstimationMenu;
+        public GameObject lightEstimationMenu
+        {
+            get { return m_LightEstimationMenu; }
+            set { m_LightEstimationMenu = value; }
+        }
 
         void Start()
         {
             if(ActiveMenu.currentMenu == MenuType.FaceTracking)
             {
                 m_FaceTrackingMenu.SetActive(true);
+                m_AllMenu.SetActive(false);
+            }
+            else if(ActiveMenu.currentMenu == MenuType.ImageTracking)
+            {
+                m_ImageTrackingMenu.SetActive(true);
                 m_AllMenu.SetActive(false);
             }
             else if(ActiveMenu.currentMenu == MenuType.PlaneDetection)
@@ -84,6 +105,11 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 m_DepthMenu.SetActive(true);
                 m_AllMenu.SetActive(false);
             }
+            else if(ActiveMenu.currentMenu == MenuType.LightEstimation)
+            {
+                m_LightEstimationMenu.SetActive(true);
+                m_AllMenu.SetActive(false);
+            }
         }
 
         static void LoadScene(string sceneName)
@@ -99,7 +125,19 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         public void ImageTrackableButtonPressed()
         {
-            LoadScene("ImageTracking");
+            ActiveMenu.currentMenu = MenuType.ImageTracking;
+            m_ImageTrackingMenu.SetActive(true);
+            m_AllMenu.SetActive(false);
+        }
+
+        public void BasicImageTrackingButtonPressed()
+        {
+            LoadScene("BasicImageTracking");
+        }
+
+        public void MultiImagesTrackingButtonPressed()
+        {
+            LoadScene("ImageTrackingWithMultiplePrefabs");
         }
 
         public void AnchorsButtonPressed()
@@ -160,6 +198,11 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public void SampleUXButtonPressed()
         {
             LoadScene("SampleUXScene");
+        }
+
+        public void ConfigChooserButtonPressed()
+        {
+            LoadScene("ConfigurationChooser");
         }
 
         public void FaceTrackingMenuButtonPressed()
@@ -226,9 +269,21 @@ namespace UnityEngine.XR.ARFoundation.Samples
             LoadScene("HumanBodyTracking3D");
         }
 
-        public void LightEstimationButtonPressed()
+        public void LightEstimationMenuButtonPressed()
         {
-            LoadScene("LightEstimation");
+            ActiveMenu.currentMenu = MenuType.LightEstimation;
+            m_LightEstimationMenu.SetActive(true);
+            m_AllMenu.SetActive(false);
+        }
+        
+        public void BasicLightEstimationButtonPressed()
+        {
+            LoadScene("BasicLightEstimation");
+        }
+        
+        public void HDRLightEstimationButtonPressed()
+        {
+            LoadScene("HDRLightEstimation");
         }
 
         public void PlaneDetectionMenuButtonPressed()
@@ -256,11 +311,13 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public void BackButtonPressed()
         {
             ActiveMenu.currentMenu = MenuType.Main;
+            m_ImageTrackingMenu.SetActive(false);
             m_FaceTrackingMenu.SetActive(false);
             m_PlaneDetectionMenu.SetActive(false);
             m_BodyTrackingMenu.SetActive(false);
             m_MeshingMenu.SetActive(false);
             m_DepthMenu.SetActive(false);
+            m_LightEstimationMenu.SetActive(false);
             m_AllMenu.SetActive(true);
         }
 
@@ -306,6 +363,11 @@ namespace UnityEngine.XR.ARFoundation.Samples
         public void DepthImagesButtonPressed()
         {
             LoadScene("DepthImages");
+        }
+
+        public void InputSystemButtonPressed()
+        {
+            LoadScene("InputSystem");
         }
     }
 }

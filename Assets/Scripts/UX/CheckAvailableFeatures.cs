@@ -149,6 +149,22 @@ namespace UnityEngine.XR.ARFoundation.Samples
         }
 
         [SerializeField]
+        Button m_BasicLightEstimation;
+        public Button basicLightEstimation
+        {
+            get { return m_BasicLightEstimation; }
+            set { m_BasicLightEstimation = value; }
+        }
+
+        [SerializeField]
+        Button m_HDRLightEstimation;
+        public Button HDRLightEstimation
+        {
+            get { return m_HDRLightEstimation; }
+            set { m_HDRLightEstimation = value; }
+        }
+
+        [SerializeField]
         Button m_PlaneDetection;
         public Button planeDetection
         {
@@ -228,6 +244,22 @@ namespace UnityEngine.XR.ARFoundation.Samples
             set { m_Depth = value; }
         }
 
+        [SerializeField]
+        Button m_ConfigChooser;
+        public Button configChooser
+        {
+            get => m_ConfigChooser;
+            set => m_ConfigChooser = value;
+        }
+
+        [SerializeField]
+        Button m_InputSystem;
+        public Button inputSystem
+        {
+            get => m_InputSystem;
+            set => m_InputSystem = value;
+        }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -277,6 +309,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 m_Interaction.interactable = true;
                 m_SampleUX.interactable = true;
                 m_CheckSupport.interactable = true;
+                m_ConfigChooser.interactable = true;
+                m_InputSystem.interactable = true;
             }
 
             if(faceDescriptors.Count > 0)
@@ -331,13 +365,18 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
             if(cameraDescriptors.Count > 0)
             {
+                m_LightEstimation.interactable = true;
                 foreach(var cameraDescriptor in cameraDescriptors)
                 {
                     if((cameraDescriptor.supportsAverageBrightness || cameraDescriptor.supportsAverageIntensityInLumens) &&
-                        cameraDescriptor.supportsAverageColorTemperature && cameraDescriptor.supportsCameraConfigurations &&
+                        (cameraDescriptor.supportsAverageColorTemperature || cameraDescriptor.supportsColorCorrection) && cameraDescriptor.supportsCameraConfigurations &&
                         cameraDescriptor.supportsCameraImage)
                     {
-                        m_LightEstimation.interactable = true;
+                        m_BasicLightEstimation.interactable = true;
+                    }
+                    if(cameraDescriptor.supportsFaceTrackingHDRLightEstimation || cameraDescriptor.supportsWorldTrackingHDRLightEstimation)
+                    {
+                        m_HDRLightEstimation.interactable = true;
                     }
 
                 }
